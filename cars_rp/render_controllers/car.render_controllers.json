@@ -1,0 +1,40 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.car2_base": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.base"
+            ]
+        },
+		"controller.render.car2": {
+            "arrays": {
+                "textures": {
+                    "Array.mods": [
+                        "Texture.mod_one",
+                        "Texture.mod_two",
+                        "Texture.mod_three"
+                    ],
+					"Array.base_color": [
+						"Texture.base"
+					]
+                }
+            },
+            "geometry": "Geometry.second",
+            "materials": [
+                {
+                    "*": "Material.bottom"
+                }
+            ],
+            "textures": [
+				"Texture.base",
+                "Array.mods[query.skin_id]"
+            ]
+        }
+    }
+}
